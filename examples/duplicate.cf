@@ -1,0 +1,28 @@
+:Duplicate_a_prime_encoded_v.reg
+:adds_vreg.2_into_vreg.3_and_vreg.5
+:requires_non_zero_prime_encoded_input_into_r0_vreg.2
+
+:Display_before_state
+  o
+
+:dupe_add
+  d_done i
+  :add_one
+    d_added
+    d_earlyzero
+    s
+    iiiiiiiiiiiiiii
+    s
+  _add_one
+
+:added s _dupe_add
+
+:earlyzero
+  is
+:adjust
+  dd dd dd dd dd dd dd dd dd dd dd dd dd dd d_done siis
+_adjust
+
+:done
+:display_result
+  so
