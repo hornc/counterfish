@@ -54,10 +54,9 @@ R1: 3371625
 
 ### setvc(p, c): [setvc.cfm](setvc.cfm)
 
+    ./counterfish.py <(./cfmacro.py <(sed 's/%VREG%/7/g;s/%C%/5/g' examples/setvc.cfm)) -i1
 Sets v.reg.7 to 5 from an empty virtual state (one register still needs to be set to 1 (`-i 1`) to provide something to multiply).
 The code should possibly ensure this is the case?
-
-    ./counterfish.py <(./cfmacro.py <(sed 's/%C%/5/g;s/%VREG%/7/g' examples/setvc.cfm)) -i1
 
 result:
 ```
