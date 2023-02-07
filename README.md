@@ -14,3 +14,5 @@
 ### Macros
 
     repeat(constant) { code block }
+
+`%CONST%` — User supplied constant `CONST`
